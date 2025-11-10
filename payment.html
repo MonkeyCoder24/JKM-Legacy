@@ -1,0 +1,130 @@
+<div class="container">
+    <div class="payment-form">
+        <h2>Payment Details</h2>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="nights">Number of Nights</label>
+                <select id="nights" onchange="updateAmount()" required>
+                    <option value="1">1 Night</option>
+                    <option value="2">2 Nights</option>
+                    <option value="3">3 Nights</option>
+                    <option value="4">4 Nights</option>
+                    <option value="5">5 Nights</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="roomType">Room Type</label>
+                <select id="roomType" onchange="updateAmount()" required>
+                    <option value="standard">Standard Room ($149/night)</option>
+                    <option value="deluxe">Deluxe Room ($199/night)</option>
+                    <option value="suite">Suite ($299/night)</option>
+                    <option value="premium">Premium Suite ($399/night)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cardName">Cardholder Name</label>
+                <input type="text" id="cardName" required>
+            </div>
+                                    
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" maxlength="16" required>
+            </div>
+                                
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="password" id="cvv" maxlength="3" required>
+                    </div>
+                </div>
+            </div>
+                                    
+            <div class="form-group">
+                <label for="amount">Total Amount</label>
+                <input type="text" id="amount" readonly>
+            </div>
+                                    
+            <button type="submit" class="payment-btn">Confirm Payment</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function updateAmount() {
+        const roomPrices = {
+            'standard': 149,
+            'deluxe': 199,
+            'suite': 299,
+            'premium': 399
+        };
+        
+        const nights = parseInt(document.getElementById('nights').value);
+        const roomType = document.getElementById('roomType').value;
+        const pricePerNight = roomPrices[roomType];
+        const total = nights * pricePerNight;
+        
+        document.getElementById('amount').value = `$${total.toFixed(2)}`;
+    }
+
+    // Initialize the amount when page loads
+    updateAmount();
+
+    document.getElementById('paymentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Payment processed successfully!');
+        window.location.href = 'index.html';
+    });
+</script>
+    <style>
+        .payment-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin: 50px auto;
+            max-width: 600px;
+        }
+                                    
+        .form-group {
+        margin-bottom: 20px;
+        }
+                                
+        .payment-form h2 {
+            color: #dfa974;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .payment-form input, .payment-form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .payment-btn {
+        background: #dfa974;
+        color: #fff;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s;
+        }
+
+        .payment-btn:hover {
+            background: #c88b4e;
+        }
+   
