@@ -1,49 +1,154 @@
-    /* Event Packages Horizontal Layout */
-    .event-packages .row {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 20px;
-        overflow-x: auto;
+    :root{
+      --accent:#b20b0b; /* dark red like the design */
+      --border:#333;
+      --muted:#222;
+      --max-width:1000px;
+      --gap:12px;
+      --pad:10px 14px;
+      --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
-    .event-packages .col-lg-4,
-    .event-packages .col-md-6 {
-        flex: 0 0 auto;
-        min-width: 300px;
-        max-width: 350px;
+    body{
+      font-family: var(--font-sans);
+      color:var(--muted);
+      margin:24px;
+      background: #fff;
     }
 
-    .ep-item {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
+    .wrapper{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 6px;
     }
 
-    .ep-text {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+    /* Title block matching the screenshot */
+    .package-heading{
+      border:1px solid var(--border);
+      border-bottom:0;
+      text-align:center;
+      padding:6px;
+      background:#fff;
     }
 
-    .ep-text ul {
-        flex: 1;
+    .package-heading h1{
+      margin:6px 0;
+      font-size:18px;
+      color:var(--accent);
+      font-weight:700;
+      letter-spacing:0.5px;
     }
 
-    /* Remove offset classes for horizontal layout */
-    .event-packages .offset-md-3,
-    .event-packages .offset-lg-0 {
-        margin-left: 0 !important;
+    .package-heading p{
+      margin:0;
+      padding:6px 0;
+      color:var(--accent);
+      font-weight:600;
+      border-top:1px solid transparent;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .event-packages .row {
-            flex-wrap: wrap;
-        }
-        
-        .event-packages .col-lg-4,
-        .event-packages .col-md-6 {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
+    /* Table styling */
+    .packages{
+      width:100%;
+      border:1px solid var(--border);
+      border-collapse:collapse;
+      table-layout:fixed;
+      background:#fff;
     }
+
+    .packages th,
+    .packages td{
+      border-left:1px solid var(--border);
+      border-right:0;
+      border-top:1px solid transparent;
+      padding:14px 12px;
+      vertical-align:top;
+      text-align:left;
+      font-size:14px;
+    }
+
+    /* Visual top border on cells to match screenshot */
+    .packages thead th{
+      border-top:1px solid var(--border);
+      text-align:center;
+      font-weight:700;
+    }
+
+    /* Make first column separators look like image (thin lines between columns) */
+    .packages thead th:first-child,
+    .packages td:first-child{
+      border-left:0;
+    }
+
+    .pkg-title{
+      color:var(--muted);
+      font-weight:700;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .pkg-price{
+      color:#111;
+      font-weight:700;
+      font-size:15px;
+      display:block;
+      margin-top:2px;
+    }
+
+    /* Feature cells use simple list look */
+    .feature-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    .feature-list li{
+      padding:6px 0;
+      border-bottom:1px solid transparent;
+      font-weight:500;
+    }
+
+    /* Thin vertical separators between columns */
+    .packages td + td,
+    .packages th + th{
+      border-left:1px solid var(--border);
+    }
+
+    /* Mobile-friendly stacked representation (duplicate content for accessibility and layout control) */
+    .stacked{
+      display:none;
+    }
+
+    /* Responsive behavior */
+    @media (max-width:880px){
+      /* Hide the table on small screens and show stacked cards */
+      .packages{ display:none; }
+      .package-heading{
+        border-left:1px solid var(--border);
+        border-right:1px solid var(--border);
+        border-top:1px solid var(--border);
+        border-bottom:0;
+      }
+      .stacked{ display:block; }
+      .stacked .card{
+        border:1px solid var(--border);
+        padding:12px;
+        margin:12px 0;
+        background:#fff;
+      }
+      .card .card-title{
+        color:var(--accent);
+        text-align:center;
+        font-weight:700;
+        margin-bottom:8px;
+      }
+      .card .card-price{
+        text-align:center;
+        font-weight:700;
+        margin-bottom:10px;
+      }
+      .card ul{ margin:0; padding:0; list-style:none; }
+      .card li{ padding:6px 0; border-top:1px solid transparent; }
+    }
+
+    /* A11y: ensure focus outlines if someone tabs to interactive element later */
+    a:focus, button:focus, .card:focus { outline:3px solid rgba(178,11,11,0.15); outline-offset:2px; }

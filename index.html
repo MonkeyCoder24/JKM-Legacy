@@ -205,7 +205,7 @@
                                     <option value="">2 Room</option>
                                 </select>
                             </div>
-                            <button type="button" class="primary-btn" onclick="window.location.href='payment.html'">Proceed to Payment</button>
+                            <button type="button" class="primary-btn" onclick="saveBookingAndProceed()">Proceed to Payment</button>
                         </form>
                     </div>
                 </div>
@@ -304,6 +304,14 @@
                         <p>Savor exquisite culinary delights and refreshing beverages crafted to perfection.</p>
                         <a href="./service-conference-banqueting.html" class="primary-btn">Learn More</a>
                     </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i class="flaticon-012-cocktail"></i>
+                        <h4>Check out what else we do!</h4>
+                        <p>Explore packages that matches with your desire!</p>
+                        <a href="./eventpackages.html" class="primary-btn">Learn More</a>
+                    </div>
                 </div>        
             </div>
         </div>
@@ -319,36 +327,7 @@
                         <div class="hp-room-item set-bg" data-setbg="https://lh3.googleusercontent.com/p/AF1QipOm0oJFq3G1zJA_f2U54UeRczIhjJbUw0YlKRNi=s680-w680-h510-rw">
                             <div class="hr-text">
                                 <h3>Standard Room</h3>
-                                <h2>199$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="https://lh3.googleusercontent.com/p/AF1QipPoQmT6f_r3tFnxb0_Uxom1wEvhzf1ZI5hp7Hn0=s680-w680-h510-rw">
-                            <div class="hr-text">
-                                <h3>Executive Room</h3>
-                                <h2>159$<span>/Pernight</span></h2>
+                                <h2>41.13$<span>/Pernight</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
@@ -377,7 +356,7 @@
                         <div class="hp-room-item set-bg" data-setbg="https://lh3.googleusercontent.com/p/AF1QipPhxTONZDE89xS9jVNlHZbBCcxP2atW1ogABpay=s680-w680-h510-rw">
                             <div class="hr-text">
                                 <h3>Deluxe Room</h3>
-                                <h2>198$<span>/Pernight</span></h2>
+                                <h2>50.26$<span>/Pernight</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
@@ -403,10 +382,68 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="https://lh3.googleusercontent.com/p/AF1QipNVjKKKnkqRo_HnBCZxnDd8s0hIMlCU4qJ6SAbU=w141-h101-n-k-no-nu">
+                        <div class="hp-room-item set-bg" data-setbg="https://lh3.googleusercontent.com/p/AF1QipPoQmT6f_r3tFnxb0_Uxom1wEvhzf1ZI5hp7Hn0=s680-w680-h510-rw">
+                            <div class="hr-text">
+                                <h3>Special Honeymoon Room</h3>
+                                <h2>63.74$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="https://lh3.googleusercontent.com/p/AF1QipPhxTONZDE89xS9jVNlHZbBCcxP2atW1ogABpay=s680-w680-h510-rw">
+                            <div class="hr-text">
+                                <h3>Deluxe Room</h3>
+                                <h2>50.26$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="hp-room-item set-bg luxury-full-width" data-setbg="https://lh3.googleusercontent.com/p/AF1QipNVjKKKnkqRo_HnBCZxnDd8s0hIMlCU4qJ6SAbU=w141-h101-n-k-no-nu">
                             <div class="hr-text">
                                 <h3>Luxury Room</h3>
-                                <h2>299$<span>/Pernight</span></h2>
+                                <h2>91.06$<span>/Pernight</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
@@ -627,6 +664,51 @@
         </div>
     </div>
     <!-- Search model end -->
+
+    <script>
+        // Initialize datepickers when document is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for jQuery UI to load
+            if (typeof jQuery !== 'undefined' && jQuery.ui) {
+                jQuery('#date-in').datepicker({
+                    dateFormat: 'yy-mm-dd',
+                    minDate: 0
+                });
+                jQuery('#date-out').datepicker({
+                    dateFormat: 'yy-mm-dd',
+                    minDate: 1
+                });
+            }
+        });
+
+        function saveBookingAndProceed() {
+            // Get the date values from the date pickers
+            const checkInDate = document.getElementById('date-in').value;
+            const checkOutDate = document.getElementById('date-out').value;
+            
+            // Validate that dates are selected
+            if (!checkInDate || !checkOutDate) {
+                alert('Please select both check-in and check-out dates.');
+                return;
+            }
+            
+            // Validate that check-out is after check-in
+            const dateIn = new Date(checkInDate);
+            const dateOut = new Date(checkOutDate);
+            
+            if (dateOut <= dateIn) {
+                alert('Check-out date must be after check-in date.');
+                return;
+            }
+            
+            // Save dates to localStorage
+            localStorage.setItem('checkInDate', checkInDate);
+            localStorage.setItem('checkOutDate', checkOutDate);
+            
+            // Redirect to payment page
+            window.location.href = 'payment.html';
+        }
+    </script>
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js" defer></script>
