@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Sona Template">
-    <meta name="keywords" content="Sona, unica, creative, html">
+    <meta name="description" content="JKM Legacy Hotel">
+    <meta name="keywords" content="JKM Legacy, Ghana hotel, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JKM Rooms</title>
+    <title>Login - JKM Legacy Hotel</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
 </head>
-
 <body>
-    <!-- Page Preloder -->
+     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -41,7 +41,7 @@
         <div class="canvas-close">
             <i class="icon_close"></i>
         </div>
-        <div class="search-icon search-switch">
+        <div class="search-icon  search-switch">
             <i class="icon_search"></i>
         </div>
         <div class="header-configure-area">
@@ -65,13 +65,14 @@
                 <li><a href="./pages.html">Pages</a>
                     <ul class="dropdown">
                         <li><a href="./room-details.html">Room Details</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
+                        <li><a href="#">Deluxe Room</a></li>
                         <li><a href="#">Family Room</a></li>
                         <li><a href="#">Premium Room</a></li>
                     </ul>
                 </li>
                 <li><a href="./blog.html">News</a></li>
                 <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./signup.html">Sign Up</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -82,20 +83,20 @@
             <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
         <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> 571-288-4210</li>
+            <li><i class="fa fa-phone"></i> 0245170306</li>
             <li><i class="fa fa-envelope"></i> Jkmlegacygh@gmail.com</li>
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
-    <header class="header-section header-normal">
+    <header class="header-section">
         <div class="top-nav">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i> 571-288-4210</li>
+                            <li><i class="fa fa-phone"></i> 0245170306</li>
                             <li><i class="fa fa-envelope"></i> Jkmlegacygh@gmail.com</li>
                         </ul>
                     </div>
@@ -107,7 +108,7 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Booking Now</a>
+                            <a href="#" class="bk-btn">Book Now</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -137,8 +138,8 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li><a href="./index.html">Home</a></li>
-                                    <li class="active"><a href="./rooms.html">Rooms</a></li>
+                                    <li class="active"><a href="./index.html">Home</a></li>
+                                    <li><a href="./rooms.html">Rooms</a></li>
                                     <li><a href="./about-us.html">About Us</a></li>
                                     <li><a href="./pages.html">Pages</a>
                                         <ul class="dropdown">
@@ -150,6 +151,7 @@
                                     </li>
                                     <li><a href="./blog.html">News</a></li>
                                     <li><a href="./contact.html">Contact</a></li>
+                                    <li><a href="./signup.html">Sign Up</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
@@ -162,221 +164,35 @@
         </div>
     </header>
     <!-- Header End -->
-
-    <!-- Breadcrumb Section Begin -->
-    <div class="breadcrumb-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb-text">
-                        <h2>Our Rooms</h2>
-                        <div class="bt-option">
-                            <a href="./home.html">Home</a>
-                            <span>Rooms</span>
+    <!--Sign Up Form Began-->
+    <main class="login-form">
+        <section class="signup-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="login-form">
+                            <h2>Login to Your Account</h2>
+                            <form action="login_process.php" method="POST">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </form>
+                            <div class="signup-link">
+                                Don't have an account? <a href="signup.html">Sign Up</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Breadcrumb Section End -->
-
-    <!-- Rooms Section Begin -->
-    <section class="rooms-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipPoQmT6f_r3tFnxb0_Uxom1wEvhzf1ZI5hp7Hn0=s680-w680-h510-rw" alt="">
-                        <div class="ri-text">
-                            <h4>Premium King Room</h4>
-                            <h3>159$<span>/Pernight</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="#" class="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipPhxTONZDE89xS9jVNlHZbBCcxP2atW1ogABpay=s680-w680-h510-rw" alt="">
-                        <div class="ri-text">
-                            <h4>Deluxe Room</h4>
-                            <h3>159$<span>/Pernight</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="#" class="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipOm0oJFq3G1zJA_f2U54UeRczIhjJbUw0YlKRNi=s680-w680-h510-rw" alt="">
-                        <div class="ri-text">
-                            <h4>Double Room</h4>
-                            <h3>159$<span>/Pernight</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="#" class="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipNVjKKKnkqRo_HnBCZxnDd8s0hIMlCU4qJ6SAbU=s680-w680-h510-rw" alt="">
-                        <div class="ri-text">
-                            <h4>Luxury Room</h4>
-                            <h3>159$<span>/Pernight</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 1</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="#" class="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="https://scontent.ford4-1.fna.fbcdn.net/v/t39.30808-6/472998976_632915739165976_2830103311150042083_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=aCNTwFvhV60Q7kNvwE_1Pm1&_nc_oc=AdmxmSIObhasrywVyHkBGyT73feon-hlsVZtEJr62ZUz0komT7ZQSJ_68cvxs25LTPk&_nc_zt=23&_nc_ht=scontent.ford4-1.fna&_nc_gid=mz5IbZ1i5ne0iHGM3Pzv6A&oh=00_Afgw_uv3Xo9y3AHiHoiW64FaKv2nk9o5QRD0tyVdbmh0ug&oe=690EEEC3" alt="">
-                        <div class="ri-text">
-                            <h4>Room With View</h4>
-                            <h3>159$<span>/Pernight</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 1</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="#" class="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="https://scontent.ford4-1.fna.fbcdn.net/v/t39.30808-6/470499291_626656226458594_6905286341485178225_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=8b96af&_nc_ohc=skGteR-vuvUQ7kNvwGO20bW&_nc_oc=AdlvZ9eMJIQPPyVD7Zq2OMa2fyas999LdA0dZBtEtwiLQYa__HPxYJhxGov_aigH5u8&_nc_zt=23&_nc_ht=scontent.ford4-1.fna&_nc_gid=Op7Jaa_3BGM3LzPHmiREGg&oh=00_AfjcyWtxMEatHAYHwlhYUimnLCiqgvqGlCZ_Gqg9s-suFQ&oe=690F1FEB" alt="">
-                        <div class="ri-text">
-                            <h4>Small View</h4>
-                            <h3>159$<span>/Pernight</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="#" class="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="room-pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">Next <i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Rooms Section End -->
-
+        </section>
+    </main>
+    <!--Sign Up Form Ended-->
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -389,13 +205,11 @@
                                     <img src="data:image/jpeg;base64,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" alt="">
                                 </a>
                             </div>
-                            <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
+                            <p>We inspire and reach millions of Ghanaians<br /> across the eastern side</p>
                             <div class="fa-social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -403,7 +217,7 @@
                         <div class="ft-contact">
                             <h6>Contact Us</h6>
                             <ul>
-                                <li>571-288-4210</li>
+                                <li>0245170306</li>
                                 <li>Jkmlegacygh@gmail.com</li>
                                 <li>Kasoa New Market, Behind Bodwiase Rural Bank</li>
                             </ul>
@@ -434,29 +248,18 @@
                         </ul>
                     </div>
                     <div class="col-lg-5">
-                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="co-text">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- Footer Section End -->
-
-    <!-- Search model Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch"><i class="icon_close"></i></div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
-    </div>
-    <!-- Search model end -->
-
-    <!-- Js Plugins -->
-    <!-- Js Plugins -->
+    <!-- Footer section end -->
+     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.magnific-popup.min.js" defer></script>
@@ -466,5 +269,4 @@
     <script src="js/owl.carousel.min.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
-
 </html>

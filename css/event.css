@@ -1,0 +1,49 @@
+    /* Event Packages Horizontal Layout */
+    .event-packages .row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        overflow-x: auto;
+    }
+
+    .event-packages .col-lg-4,
+    .event-packages .col-md-6 {
+        flex: 0 0 auto;
+        min-width: 300px;
+        max-width: 350px;
+    }
+
+    .ep-item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ep-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ep-text ul {
+        flex: 1;
+    }
+
+    /* Remove offset classes for horizontal layout */
+    .event-packages .offset-md-3,
+    .event-packages .offset-lg-0 {
+        margin-left: 0 !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .event-packages .row {
+            flex-wrap: wrap;
+        }
+        
+        .event-packages .col-lg-4,
+        .event-packages .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }

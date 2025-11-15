@@ -16,10 +16,10 @@
             <div class="form-group">
                 <label for="roomType">Room Type</label>
                 <select id="roomType" onchange="updateAmount()" required>
-                    <option value="standard">Standard Room ($149/night)</option>
-                    <option value="deluxe">Deluxe Room ($199/night)</option>
-                    <option value="suite">Suite ($299/night)</option>
-                    <option value="premium">Premium Suite ($399/night)</option>
+                    <option value="standard">Standard Room ($41.13/night)</option>
+                    <option value="deluxe">Deluxe Room ($50.26/night)</option>
+                    <option value="suite">Executive ($299/night)</option>
+                    <option value="premium">Luxury ($399/night)</option>
                 </select>
             </div>
 
@@ -60,29 +60,28 @@
 
 <script>
     function updateAmount() {
-        const roomPrices = {
-            'standard': 149,
-            'deluxe': 199,
-            'suite': 299,
-            'premium': 399
-        };
-        
-        const nights = parseInt(document.getElementById('nights').value);
-        const roomType = document.getElementById('roomType').value;
-        const pricePerNight = roomPrices[roomType];
-        const total = nights * pricePerNight;
-        
-        document.getElementById('amount').value = `$${total.toFixed(2)}`;
-    }
+    const roomPrices = {
+        'standard': 149,
+        'deluxe': 199,
+        'suite': 299,
+        'premium': 399
+    };
+    
+    const nights = parseInt(document.getElementById('nights').value);
+    const roomType = document.getElementById('roomType').value;
+    const pricePerNight = roomPrices[roomType];
+    const totalUSD = nights * pricePerNight;
+    
+    // Convert total from USD to GHS
+    const exchangeRate = 10.98; // Current exchange rate
+    const totalGHS = totalUSD * exchangeRate;
+    
+    document.getElementById('amount').value = `₵${totalGHS.toFixed(2)}`; // Display in GHS
+}
 
-    // Initialize the amount when page loads
-    updateAmount();
+// Initialize the amount when page loads
+updateAmount();
 
-    document.getElementById('paymentForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Payment processed successfully!');
-        window.location.href = 'index.html';
-    });
 </script>
     <style>
         .payment-form {
