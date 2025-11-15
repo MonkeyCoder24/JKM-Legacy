@@ -1,49 +1,204 @@
-    /* Event Packages Horizontal Layout */
-    .event-packages .row {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 20px;
+/* Event Packages Section */
+.event-packages-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.packages-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* JKM Silver Package Table */
+.jkm-silver-package-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    font-family: 'Cabin', sans-serif;
+}
+
+/* Main Header - JKM Silver Package */
+.jkm-silver-package-table .main-header {
+    background-color: #ffffff;
+    color: #dc3545;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    padding: 24px 20px;
+    border: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Subheading */
+.jkm-silver-package-table .sub-header {
+    background-color: #ffffff;
+    color: #dc3545;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding: 16px 20px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+}
+
+/* Package Headers Row */
+.jkm-silver-package-table thead tr:nth-child(3) th {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+/* Feature Column Header */
+.jkm-silver-package-table .feature-column {
+    font-size: 18px;
+    color: #333333;
+    text-align: left;
+    width: 20%;
+}
+
+/* Package Header Styling */
+.jkm-silver-package-table .package-header {
+    width: 20%;
+}
+
+.jkm-silver-package-table .package-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.jkm-silver-package-table .package-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #dc3545;
+}
+
+/* Table Body */
+.jkm-silver-package-table tbody th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+    padding: 16px 15px;
+    border: 1px solid #dee2e6;
+}
+
+.jkm-silver-package-table tbody td {
+    text-align: center;
+    padding: 16px 15px;
+    border: 1px solid #dee2e6;
+    font-size: 15px;
+    color: #555555;
+}
+
+/* Zebra striping for better readability */
+.jkm-silver-package-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.jkm-silver-package-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover effect on rows */
+.jkm-silver-package-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    .event-packages-section {
+        padding: 40px 0;
+    }
+    
+    .packages-wrapper {
+        padding: 0 15px;
+    }
+    
+    .jkm-silver-package-table .main-header {
+        font-size: 24px;
+        padding: 20px 15px;
+    }
+    
+    .jkm-silver-package-table .sub-header {
+        font-size: 14px;
+        padding: 14px 15px;
+    }
+    
+    .jkm-silver-package-table .package-title {
+        font-size: 18px;
+    }
+    
+    .jkm-silver-package-table .package-price {
+        font-size: 16px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .event-packages-section {
+        padding: 30px 0;
+    }
+    
+    .packages-wrapper {
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
+    
+    .jkm-silver-package-table {
+        min-width: 700px;
+        font-size: 14px;
+    }
+    
+    .jkm-silver-package-table .main-header {
+        font-size: 20px;
+        padding: 16px 12px;
+    }
+    
+    .jkm-silver-package-table .sub-header {
+        font-size: 12px;
+        padding: 12px 10px;
+    }
+    
+    .jkm-silver-package-table thead tr:nth-child(3) th {
+        padding: 14px 10px;
+    }
+    
+    .jkm-silver-package-table .package-title {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    .jkm-silver-package-table .package-price {
+        font-size: 14px;
+    }
+    
+    .jkm-silver-package-table tbody th,
+    .jkm-silver-package-table tbody td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+}
 
-    .event-packages .col-lg-4,
-    .event-packages .col-md-6 {
-        flex: 0 0 auto;
-        min-width: 300px;
-        max-width: 350px;
+/* Very Small Screens */
+@media (max-width: 480px) {
+    .jkm-silver-package-table {
+        min-width: 650px;
     }
-
-    .ep-item {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
+    
+    .jkm-silver-package-table .main-header {
+        font-size: 18px;
     }
-
-    .ep-text {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+    
+    .jkm-silver-package-table .sub-header {
+        font-size: 11px;
     }
-
-    .ep-text ul {
-        flex: 1;
-    }
-
-    /* Remove offset classes for horizontal layout */
-    .event-packages .offset-md-3,
-    .event-packages .offset-lg-0 {
-        margin-left: 0 !important;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .event-packages .row {
-            flex-wrap: wrap;
-        }
-        
-        .event-packages .col-lg-4,
-        .event-packages .col-md-6 {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
+}
