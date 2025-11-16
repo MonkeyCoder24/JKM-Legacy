@@ -2383,3 +2383,60 @@ ul, ol {
 		margin-bottom: 10px;
 	}
 }
+/*---------------------
+  Conference & Banqueting Gallery
+-----------------------*/
+
+.conference-carousel .cc-item {
+	margin: 0 10px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.conference-carousel .cc-item img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.conference-carousel.owl-carousel .owl-nav button {
+	height: 44px;
+	width: 44px;
+	border: 1px solid #ebebeb;
+	font-size: 24px;
+	color: #707079;
+	background: #ffffff;
+	line-height: 48px;
+	text-align: center;
+	border-radius: 50%;
+	position: absolute;
+	left: -100px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.conference-carousel.owl-carousel .owl-nav button.owl-next {
+	left: auto;
+	right: -100px;
+}
+
+.conference-carousel.owl-carousel .owl-nav button:hover {
+	color: #ffffff;
+	background: #dfa974;
+	border-color: #dfa974;
+}
+
+.conference-carousel.owl-carousel:hover .owl-nav button {
+	left: 20px;
+}
+
+.conference-carousel.owl-carousel:hover .owl-nav button.owl-next {
+	left: auto;
+	right: 20px;
+}
