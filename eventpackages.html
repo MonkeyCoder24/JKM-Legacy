@@ -229,7 +229,14 @@
                             const guestMatch = selectedOption.text.match(/\((\d+) guests\)/);
                             const guests = guestMatch ? guestMatch[1] : '200';
                             
-                            window.location.href = `eventpayment.html?package=${packageSelect.value}&guests=${guests}&date=${encodeURIComponent(eventDate)}&type=${encodeURIComponent(eventType)}`;
+                            // Save to localStorage
+                            localStorage.setItem('eventPackage', packageSelect.value);
+                            localStorage.setItem('eventDate', eventDate);
+                            localStorage.setItem('eventType', eventType);
+                            localStorage.setItem('eventGuests', guests);
+                            
+                            // Redirect to payment page
+                            window.location.href = 'eventpayment.html';
                         }
                         </script>
                     </div>
