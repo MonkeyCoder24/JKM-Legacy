@@ -186,11 +186,11 @@
             <div class="form-group">
                 <label for="roomType">Room Type</label>
                 <select id="roomType" onchange="updateAmount()" required>
-                    <option value="standard">Standard Room ($41.13/night)</option>
-                    <option value="deluxe">Deluxe Room ($50.26/night)</option>
-                    <option value="suite">Executive Room(63.74/night)</option>
-                    <option value="SHR">Special Honeymoon Room($81.85/night)</option>
-                    <option value="premium">Luxury Room($91.06/night)</option>
+                    <option value="standard">Standard Room (GH₵452/night)</option>
+                    <option value="deluxe">Deluxe Room (GH₵552/night)</option>
+                    <option value="suite">Executive Room (GH₵700/night)</option>
+                    <option value="SHR">Special Honeymoon Room (GH₵899/night)</option>
+                    <option value="premium">Luxury Room (GH₵1000/night)</option>
                 </select>
             </div>
              <div class="form-group">
@@ -263,24 +263,20 @@
     
     function updateAmount() {
         const roomPrices = {
-            'standard': 41.13,
-            'deluxe': 50.26,
-            'suite': 63.74,
-            'SHR': 81.85,
-            'premium': 91.06
+            'standard': 452,
+            'deluxe': 552,
+            'suite': 700,
+            'SHR': 899,
+            'premium': 1000
         };
         
         const nightsText = document.getElementById('nights').value;
         const nights = parseInt(nightsText) || 0;
         const roomType = document.getElementById('roomType').value;
         const pricePerNight = roomPrices[roomType];
-        const totalUSD = nights * pricePerNight;
+        const totalGHS = nights * pricePerNight;
         
-        // Convert total from USD to GHS
-        const exchangeRate = 10.98; // Current exchange rate
-        const totalGHS = totalUSD * exchangeRate;
-        
-        document.getElementById('amount').value = `₵${totalGHS.toFixed(2)}`; // Display in GHS
+        document.getElementById('amount').value = `GH₵${totalGHS.toFixed(2)}`;
     }
     
     // Initialize booking information when page loads

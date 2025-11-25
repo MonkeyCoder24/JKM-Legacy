@@ -187,9 +187,9 @@
                 <label for="packageType">Event Package</label>
                 <select id="packageType" onchange="updateAmount()" required>
                     <option value="">Select Package</option>
-                    <option value="wedding">Standard Package ($1,183.73/event)</option>
-                    <option value="conference">Silver Package ($768.60/event)</option>
-                    <option value="birthday">Platinum Package ($549/event)</option>
+                    <option value="wedding">Standard Package (GH₵13,000/event)</option>
+                    <option value="conference">Silver Package (GH₵8,440/event)</option>
+                    <option value="birthday">Platinum Package (GH₵6,028/event)</option>
                     <option value="custom">Custom Package (Contact for pricing)</option>
                 </select>
             </div>
@@ -210,15 +210,13 @@
 </div>
 
 <script>
-    // Event package prices in USD
+    // Event package prices in GHS
     const eventPrices = {
-        'wedding': 1092.73,
-        'conference': 1,183.73,
-        'birthday': 1274.78,
+        'wedding': 13000,
+        'conference': 8440,
+        'birthday': 6028,
         'custom': 0
     };
-    
-    const exchangeRate = 10.98; // Current exchange rate USD to GHS
     
     function updateAmount() {
         const packageType = document.getElementById('packageType').value;
@@ -233,10 +231,9 @@
             return;
         }
         
-        const priceUSD = eventPrices[packageType];
-        const priceGHS = priceUSD * exchangeRate;
+        const priceGHS = eventPrices[packageType];
         
-        document.getElementById('amount').value = `₵${priceGHS.toFixed(2)}`;
+        document.getElementById('amount').value = `GH₵${priceGHS.toFixed(2)}`;
     }
     
     function togglePaymentFields() {
